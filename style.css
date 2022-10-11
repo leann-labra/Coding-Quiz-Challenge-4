@@ -2,4 +2,39 @@
     --center: center;
     --margin: 50%;
 }
+body {
+    background-color: mistyrose;
+}
+#start {
+    background-color: lightpink;
+    border: 0px;
+    padding: 15px;
+    border-radius: 15px;
+}
+#start:hover {
+    background-color: lightsalmon;
+    transition: .7s;
+}
+.header {
+    text-align: center;
+}
 
+.allq {
+    text-align:center;
+}
+
+.allq > section > input{
+    display: flex;
+    width: 100%;
+    background-color: bisque;
+    border-radius: 10px;
+    margin-bottom: 4px;
+    padding: 20px;
+    font-size: 16px;
+}
+
+.allq > section > input:hover{
+    background-color: burlywood;
+    padding:40px;
+    transition: .7s;
+}
