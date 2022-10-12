@@ -8,27 +8,34 @@
 body {
     background-color: mistyrose;
 }
-.funbutton, #fun {
+header {
+    display: inline-flex;
+    width:100%;
+}
+
+h1, h3, #startBtn {
+    text-align:center;
+    font-style:bold;
+}
+#startBtn {
     background-color: lightpink;
     border: 0px;
     padding: 15px;
     border-radius: 15px;
 }
-#fun:hover {
+#startBtn:hover {
     background-color: lightsalmon;
     transition: .7s;
 }
 
-.header {
-    text-align: center;
-}
 
-.allq, #revealQ {
+
+.allq {
     display:none;
     text-align:center;
 }
 
-.allq > div > input{
+.allq > div > uL {
     display: flex;
     width: 100%;
     background-color: bisque;
@@ -38,7 +45,7 @@ body {
     font-size: 16px;
 }
 
-.allq > div > input:hover{
+.allq > div > uL:hover{
     background-color: burlywood; 
     transition: .7s;
 }
@@ -46,18 +53,7 @@ body {
     /* background-color:lightsalmon; */
     /* transition: 0.2s; */
 
-#secondq {
-    display:none;
-}
-#thirdq {
-    display:none;
-}
-#fourthq {
-    display:none;
-}
-#fifthq {
-    display:none;
-}
+
 #correctA {
     display:none;
     font-family:'Courier New', Courier, monospace;

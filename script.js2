@@ -1,10 +1,9 @@
 var time = document.querySelector("#time");
 var alertPopUp = document.querySelector("#alert");
-var startBtn = document.querySelector(".start",true);
+var startBtn = document.querySelector(".start");
 var revealQ = document.querySelector("#revealQ");
 
-var correctAnswer = document.querySelector(".correct");
-var correct = true;
+
 
 var secondsLeft = 30; 
 
@@ -38,18 +37,19 @@ startBtn.addEventListener("click", function revealQ () {
 });
 
 var answer = document.querySelector(".answer");
+var secondq =document.querySelector("#secondq");
+var correctAnswer = document.querySelector(".correct");
 
 answer.addEventListener("click", function revealCorrect () {
     if ("click" == correctAnswer) {
         //not working for some reason :(
         document.getElementById("correctA").style.display="block";
-        //document.getElementById("secondq").style.display="block";
-        document.getElementById("firstq").style.display="none";
+        document.getElementById("secondq").style.display="block";
         
     } else {
         document.getElementById("wrongA").style.display="block";
-       // document.getElementById("secondq").style.display="block";
-        //document.getElementById("firstq").style.display="none";
+        document.getElementById("secondq").style.display="block";
+        document.getElementById("firstq").style.display="none";
         secondsLeft-2;
         return;
     };
