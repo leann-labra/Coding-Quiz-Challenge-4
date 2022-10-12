@@ -23,7 +23,7 @@ h1, h3 {
     justify-content:center;
 }
 .startBtn {
-
+    justify-content: center;
     background-color: lightpink;
     border: 0px;
     padding: 15px;
@@ -33,14 +33,13 @@ h1, h3 {
     background-color: lightsalmon;
     transition: .7s;
 }
-
-
-
+#quiz-content,
+#hallOfFame {
+    display: "none";
+}
 #quiz-content {
-    display:none;
     text-align:center;
 }
-
 #quiz-content > div > uL {
     display: flex;
     width: 100%;
@@ -50,7 +49,6 @@ h1, h3 {
     padding: 20px;
     font-size: 16px;
 }
-
 #quiz-content > div > uL:hover{
     background-color: burlywood; 
     transition: .7s;
@@ -58,17 +56,19 @@ h1, h3 {
 /* .correct { */
     /* background-color:lightsalmon; */
     /* transition: 0.2s; */
-
-
-#correctA {
+#WoR {
     display:none;
     font-family:'Courier New', Courier, monospace;
     color:grey;
     font-style:italic;
 }
-#wrongA {
+
+form {
+    background-color: bisque;
+}
+/* #wrongA {
     display:none;
     font-family:'Courier New', Courier, monospace;
     color:grey;
     font-style:italic;
-}
+} */

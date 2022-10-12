@@ -11,16 +11,16 @@
 
     <!-- timer and highscore header-->
     <header>
-       <p>HighScore:<span id="highscore"></span></p>
+       <p>Score:<span id="score"></span></p>
        <p>Time:<span id="timer"></span></p>
      </header>
 
     <!-- intro and quiz parameters-->
     <section>
-        <div id="titlePage" class="show">
+        <div id="titlePage">
             <h1>Speed Coding Quiz!</h1>
                 <h3>This is a speed run coding quiz. Yes, it will be high stakes, as you will have 30 seconds to answer each question. Each incorrect questions will be penalized by 10 seconds. Each Question will be worth 10 points. Don't be sore loser if you run out of time! Ready? </h3>
-                <div class="btn-container-div">
+                <div>
                     <button class="startBtn">START!</button>
                 </div>
                 
@@ -35,7 +35,19 @@
         </div>
         <div class="allq">
             <uL id="choices"></uL>
-            <div id="WoC"></div>
+            <div id="WoR"></div>
+     </section>
+
+    <!-- Hall of fame goes here -->
+    <section id="hallOfFame">
+        <div>
+            <h2>Woohoo! You've Made it!</h2>
+            <h3>Final Score: <span id="score"></span></h3>
+                <form>
+                    <label for="initials">Initials:</label><br>
+                    <input type="text" id="initials-submit"><br>
+                    <button id="initials-submit">Submit Initials!</button> 
+                </form>
         </div>
     </section>
 
