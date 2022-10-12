@@ -40,7 +40,8 @@ startBtn.addEventListener("click", function revealQ () {
 var answer = document.querySelector(".answer");
 
 answer.addEventListener("click", function revealCorrect () {
-    if ("click" === correctAnswer) {
+    if ("click" == correctAnswer) {
+        //not working for some reason :(
         document.getElementById("correctA").style.display="block";
         //document.getElementById("secondq").style.display="block";
         document.getElementById("firstq").style.display="none";
