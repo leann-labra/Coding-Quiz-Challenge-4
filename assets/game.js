@@ -28,10 +28,10 @@ startBtn.addEventListener("click", function timerCountdown() {
         }, 1000);//with setInterval function
         
     document.getElementById("titlePage").style.display="none";
-
-    showQuestions();
-
-        },
+   
+    showQuestions();//not defined? why
+     },
+   
   );
 
 function showQuestions() {
@@ -44,8 +44,8 @@ function showQuestions() {
    question.textContent = questionShown;
    choices.textContent = questionChoices;
 
-//    console.log(questionShown);
-//    console.log(questionChoices);
+   console.log(questionShown);
+   console.log(questionChoices);
 
 question.choices.forEach(function(choice, i) {
     // creates a new button for each choice
@@ -62,7 +62,7 @@ question.choices.forEach(function(choice, i) {
     choiceList.appendChild(choiceBtn);
   });
    }
-};
+} 
 
 //now, I need to make a function for the clicked question to determine whether or not it is correct
 
