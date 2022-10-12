@@ -23,12 +23,12 @@ body {
     text-align: center;
 }
 
-.allq {
+.allq, #revealQ {
     display:none;
     text-align:center;
 }
 
-.allq > section > input{
+.allq > div > input{
     display: flex;
     width: 100%;
     background-color: bisque;
@@ -38,16 +38,33 @@ body {
     font-size: 16px;
 }
 
-.allq > section > input:hover{
-    background-color: burlywood;
-    padding:40px;
+.allq > div > input:hover{
+    background-color: burlywood; 
     transition: .7s;
 }
 /* .correct { */
     /* background-color:lightsalmon; */
     /* transition: 0.2s; */
 
-.correctA {
+#secondq {
+    display:none;
+}
+#thirdq {
+    display:none;
+}
+#fourthq {
+    display:none;
+}
+#fifthq {
+    display:none;
+}
+#correctA {
+    display:none;
+    font-family:'Courier New', Courier, monospace;
+    color:grey;
+    font-style:italic;
+}
+#wrongA {
     display:none;
     font-family:'Courier New', Courier, monospace;
     color:grey;
