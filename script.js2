@@ -10,8 +10,6 @@ var secondsLeft = 30;
 //start button begins timer and hides intro upon click
 startBtn.addEventListener ("click", function timerCountdown () {
     
-    document.getElementById("intro").style.display="none";
-
     var timerInterval = setInterval(function() {
         secondsLeft--;
         time.textContent = secondsLeft;

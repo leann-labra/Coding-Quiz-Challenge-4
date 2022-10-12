@@ -11,8 +11,8 @@
 
     <!-- timer and highscore header-->
     <header>
-       <p id="highscore"></p>
-       <p id="timer"></p>
+       <p>HighScore:<span id="highscore"></span></p>
+       <p>Time:<span id="timer"></span></p>
      </header>
 
     <!-- intro and quiz parameters-->
@@ -20,14 +20,18 @@
         <div id="titlePage" class="show">
             <h1>Speed Coding Quiz!</h1>
                 <h3>This is a speed run coding quiz. Yes, it will be high stakes, as you will have 30 seconds to answer each question. Each incorrect questions will be penalized by 10 seconds. Each Question will be worth 10 points. Don't be sore loser if you run out of time! Ready? </h3>
-                <button id="startBtn">START!</button>
+                <div class="btn-container-div">
+                    <button class="startBtn">START!</button>
+                </div>
+                
+
         </div>
     </section>
 
     <!-- coding quiz questions will go here -->
-    <section>
-        <div class="allq" class="hide">
-            <h3 id="questions"></h3>
+    <section id="quiz-content">
+        <div>
+            <h3 id="question">Quiz placeholder</h3>
         </div>
         <div class="allq">
             <uL id="choices"></uL>
@@ -36,7 +40,7 @@
     </section>
 
     <script src= "./assets/highscore.js"></script>
-    <script src="./assets/timer.js"></script>
     <script src="./assets/questions.js"></script>
+    <script src="./assets/game.js"></script>
 </body>
 </html>
