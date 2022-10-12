@@ -1,3 +1,6 @@
+* {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
 :root {
     --center: center;
     --margin: 50%;
@@ -5,21 +8,23 @@
 body {
     background-color: mistyrose;
 }
-#start {
+.funbutton, #fun {
     background-color: lightpink;
     border: 0px;
     padding: 15px;
     border-radius: 15px;
 }
-#start:hover {
+#fun:hover {
     background-color: lightsalmon;
     transition: .7s;
 }
+
 .header {
     text-align: center;
 }
 
 .allq {
+    display:none;
     text-align:center;
 }
 
@@ -37,4 +42,14 @@ body {
     background-color: burlywood;
     padding:40px;
     transition: .7s;
+}
+/* .correct { */
+    /* background-color:lightsalmon; */
+    /* transition: 0.2s; */
+
+.correctA {
+    display:none;
+    font-family:'Courier New', Courier, monospace;
+    color:grey;
+    font-style:italic;
 }

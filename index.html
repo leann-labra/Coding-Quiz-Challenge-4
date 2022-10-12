@@ -8,64 +8,75 @@
     <title>Coding Quiz</title>
 </head>
 <body>
-    <main class="header">
-        <h1>Coding Quiz!</h1>
-            <h3>This is a coding quiz designed to test your knowledge on how to code</h3>
+    <!-- intro to quiz -->
+    <main class="header" id="intro">
+        <h1>Speed Coding Quiz!</h1>
+            <h2>This is a coding quiz designed to test your knowledge on how to code</h2>
             <p>are ya ready kids? Click START QUIZ to begin</p>
-            <input type="button" id="start" id= "alert" value="START QUIZ">
+            <input type="button" class="start" class="funbutton" id="fun" id= "alert" id="intro" value="START QUIZ">
     </main>
 
+    <!-- timer -->
     <section>
-        <h3 id="time" style="text-align:center" id="start">ready?</h3> 
-        
+        <h3 id="time" style="text-align:center" class="start" class="funbutton">ready?</h3> 
     </section>
-    <section class="allq">
-        <section class="firstq">
-            <h2>Question 1</h2>
-                <h3>type question here</h3>
-                <input type="button" value="answer">
-                <input type="button" value="answer">
-                <input type="button" value="answer">
-                <input type="button" value="answer">
-         </section>
 
-        <section class="secondq">
+    <section class="allq" id="revealq">
+        <div>
+            <h2 id="firstq">Question 1</h2>
+                <h3>type question here</h3>
+                <input type="button" class="correct" value="answer">
+                <input type="button" value="answer">
+                <input type="button" value="answer">
+                <input type="button" value="answer">
+        </div>
+
+        <div id="secondq">
             <h2>Question 2</h2>
             <h3>type question here</h3>
                 <input type="button" value="answer">
                 <input type="button" value="answer">
+                <input type="button" class="correct" value="answer">
                 <input type="button" value="answer">
-                <input type="button" value="answer">
-        </section>
+                <div class="correctA">Correct!</div>
+        </div>
 
-        <section class="thirdq">
+        <div id="thirdq">
             <h2>Question 3</h2>
             <h3>type question here</h3>
                 <input type="button" value="answer">
-                <input type="button" value="answer">
+                <input type="button" class="correct" value="answer">
                 <input type="button" value="answer">
                 <input type="button" value="answer">  
-        </section>
+                <div class="correctA">Correct!</div>
+        </div>
 
-        <section class="fourthq">
+        <div id="fourthq">
             <h2>Question 4</h2>
             <h3>type question here</h3>
                 <input type="button" value="answer">
                 <input type="button" value="answer">
                 <input type="button" value="answer">
-                <input type="button" value="answer">  
-        </section>
+                <input type="button" class="correct" value="answer"> 
+                <div class="correctA">Correct!</div>
+        </div>
 
-        <section class="fifthq">
+        <div class="fifthq">
             <h2>Question 5</h2>
             <h3>type question here</h3>
-                <input type="button" value="answer">
+                <input type="button" class="correct" value="answer">
                 <input type="button" value="answer">
                 <input type="button" value="answer">
                 <input type="button" value="answer">  
-        </section>
+                <div class="correctA">Correct!</div>
+        </div>
+
+        <div>
+            <h2>Highscore <span id="highScore">0</span></h2>
+        </div>
 
     </section>
+
     <script src= "script.js"></script>
 </body>
 </html>
