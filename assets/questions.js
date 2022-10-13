@@ -1,4 +1,4 @@
-// array of questions to draw from 
+// separated questions in a separate js to make game js look neater 
 var questions= [
     {
         title: "In JavaScript, what element is used to store multiple values in a single variable?",
