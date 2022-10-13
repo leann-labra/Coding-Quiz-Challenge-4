@@ -29,96 +29,100 @@ var questions= [
 ];
 
 
-//declared variables for game
+//declared variables for game timer and score keepnig
 var questionsIndex = 0;
 var score = 0;
-
 var secondsLeft = 30;
 var penalty = 10;
 
 
 // variables to reference DOM elements 
-var startBtn = document.querySelector(".startBtn");
+var startBtn = document.querySelector("#startBtn");
 var timer = document.querySelector("#timer");
-var question = document.querySelector("#question");
-var choiceList = document.querySelector("#choices");
+
 var quizContent = document.querySelector("#quiz-content");
 var WoR = document.querySelector("#WoR");
+var choiceBtn = documentl.querySelector("#choices");
 
 var scoreReveal = document.querySelector("#score");
 
-//timer 
-startBtn.addEventListener("click", function timerCountdown() {
+// declared timer variable
+var timer = setInterval(removeSecond, 1000); 
 
-    var timerInterval = setInterval( function() {
-        secondsLeft--;
-        timer.textContent = secondsLeft;
-    
-        if(secondsLeft === 0) {
-          // Stops execution of action at set interval
-        clearInterval(timerInterval);
-        alert("ran out of time sorry :(");};
+var setInterval= function (secondsLeft() {
+    secondsLeft--;
+    timer.textContent = secondsLeft;
 
-        }, 1000);//with setInterval function
-    
+    if(secondsLeft === 0) {
+      // Stops execution of action at set interval
+    clearInterval(timerInterval);
+    alert("ran out of time sorry :(");};
+
+    }, 1000);//with setInterval function
+
+
+//when startbtn is clicked, timer countdown begins and questions are shown{
+function beginQuiz() {
+    //title page is hidden once start is clicked
     document.getElementById("titlePage").style.display="none";
-    console.log(document);
-    
+    document.getElementById("quiz-content").style.display="block";
+    //questions are revealed
     showQuestions(); 
+}
 
-    },
-  );
+//globally declared variables to use to represent array of question titles and question choices for following function
+var qTitle= questions[questionsIndex].title;
+var qTitleEl = document.querySelector("#questionTitle");
+var qchoices = questions[questionsIndex].choices;
 
- function showQuestions() {
+//function to extract questions written in questions object array
+function showQuestions() {
 
-   //reveal question taken from question index
-   for (var i=0; i <questions.length; i++) {
-   
-   var questionShown = questions[questionsIndex].title;
-   var questionChoices =questions[questionsIndex].choices;
-   question.textContent = questionShown;
-   choiceList.textContent = questionChoices;
-   
-    //checking to see if Array can be recalled from global object
-        //  console.log(questionShown);
-        //  console.log(questionChoices);
+    //displays current question in a for loop
+    for (var i=0; i < questions.length; i++ ) {
+        qTitleEl.textContent=qTitle.title; 
+    }
+    //clear any previous question choices
+    qchoices.innterHTML = "";
+
+    // qchoices = document.querySelector("#choices");
 
     // creates a new button for each choice
-    questionsIndex.choiceList.forEach(function(choice, i) {
+    qTitle.choices.forEach( function(choice, i) {
     
-        var choiceBtn = document.createElement("button");
-        choiceBtn.setAttribute("class", "choice");
-        choiceBtn.setAttribute("value", choice);
+        //for each button, it will have a value of choice
+       var choiceBtn = document.createElement("button");
+        choiceBtn.setAttribute("id", "choices");
+        choiceBtn.setAttribute("value", qchoices);
 
-        choiceBtn.textContent = i + choice;
+        choiceBtn.textContent = i + "." + qchoices;
 
-         // display on the page
-         choiceList.appendChild(choiceBtn);
+         // display on the page and append after last answer choice
+         qchoices.appendChild(choiceBtn);
         // attach click event listener to each choice
-        choiceBtn.onclick = clickedQuestion;
+         choiceBtn.onclick = clickedAnswer;
      });
-    } //curly bracket from for loop
+     //curly bracket from for loop
  
-//now, I need to make a function for the clicked question to determine whether or not it is correct
-    var clickedQuestion = function clickedQuestion() {
+//clicked choice screening
+    var clickedAnswer = function clickedChoice() {
 
-    if(clickedQuestion.value !== questions[questionsIndex].answer) {
+    if(clickedAnswer !== questions[questionsIndex].answer) {
         //penalty suffered
         secondsLeft = secondsLeft - penalty;
         WoR.textContent = "Wrong :( The correct answer " + "questions[questionsIndex].answer";
     } else {
         WoR.textContent= "Correct! You know your stuff!";
-        score = score + 10;
+        score.textContent = score + 10;
     };
-    };
-
     //go to length of index until at the end
     questionsIndex++;
 
+    //when questions run out, the function for finishing the quiz is triggered
     if (questionsIndex === questions.length) {
         finishQuiz();
-    };
-
+     };
+    }; //end of for loop.. hopefully
  };
 
 function finishQuiz() {
@@ -131,9 +135,12 @@ function finishQuiz() {
 
 };
 
+
 var revealHallOfFame = document.querySelector("#hallOfFame");
 
 function saveHighscore() {
     var submitBtn = document.querySelector("#submit");
     submitBtn.onclick = localStorage.getItem();
 }
+
+startBtn.addEventListener("click", beginQuiz());

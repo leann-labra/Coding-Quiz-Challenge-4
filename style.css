@@ -22,26 +22,27 @@ h1, h3 {
 .btn-container-div {
     justify-content:center;
 }
-.startBtn {
+#startBtn {
     justify-content: center;
     background-color: lightpink;
     border: 0px;
     padding: 15px;
     border-radius: 15px;
 }
-.startBtn:hover {
+#startBtn:hover {
     background-color: lightsalmon;
     transition: .7s;
 }
 #quiz-content,
 #hallOfFame {
-    display: "none";
-}
-#quiz-content {
+    display:"none";
     text-align:center;
 }
-#quiz-content > div > uL {
+
+#choices {
     display: flex;
+    flex-direction:row;
+    justify-content: flex-start;
     width: 100%;
     background-color: bisque;
     border-radius: 10px;
@@ -53,9 +54,7 @@ h1, h3 {
     background-color: burlywood; 
     transition: .7s;
 }
-/* .correct { */
-    /* background-color:lightsalmon; */
-    /* transition: 0.2s; */
+
 #WoR {
     display:none;
     font-family:'Courier New', Courier, monospace;
@@ -66,9 +65,3 @@ h1, h3 {
 form {
     background-color: bisque;
 }
-/* #wrongA {
-    display:none;
-    font-family:'Courier New', Courier, monospace;
-    color:grey;
-    font-style:italic;
-} */
