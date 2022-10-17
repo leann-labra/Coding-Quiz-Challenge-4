@@ -15,14 +15,16 @@ header {
 }
 
 h1, h3 {
-    text-align:center;
+    text-align: var(--center);
     font-style:bold;
 }
 
 #titlepage {
     display:block;
 }
-button#startBtn {
+/* refuses to center...and i am sobbing */
+#startBtn {
+    display:flex;
     justify-content: var(--center);
     background-color: lightpink;
     border: 0px;
@@ -39,7 +41,7 @@ button#startBtn {
 }
 
 #choices {
-    display: flex;
+    display:flex;
     flex-direction:row;
     justify-content: flex-start;
     width: 100%;
